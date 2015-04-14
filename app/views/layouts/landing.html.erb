@@ -7,15 +7,11 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
-    <%= render "layouts/header" %>
-    <div class="container">
-      <%= flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
-      <% end %>
+  <body style="max-height: 100%;">
+    <div class="container landing-bg">
+    <%= render "layouts/header_landing" %>  
     <%= yield %>
-    <%= render "layouts/footer" %>
+    <!--%= render "layouts/footer" %-->
     
-    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>
