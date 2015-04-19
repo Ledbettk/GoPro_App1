@@ -2,7 +2,7 @@ class VideosController < ApplicationController
     def new
         @video = video.new
     end
-    
+
     def index
       @video = Video.all
     end
@@ -23,5 +23,10 @@ class VideosController < ApplicationController
       @video.delete
       flash.notice = "Video '#{@video.title}' Deleted!"
       redirect_to articles_path
+    end
+    
+    def show_video
+    	@video = Videos.find(params[:id])
+    	render video_page
     end
 end

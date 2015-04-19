@@ -31,3 +31,44 @@ $gray-mediumlight: #eaeaea;
     color: $state-danger-text;
   }
 }
+
+.navbar-logo{
+  max-width: 100%;
+  max-height: 80px;
+}
+
+.nav-style{
+  background-color: black;
+  color: #08A1E5;
+  margin-top: auto;
+}
+
+.nav-link {
+  color: #08A1E5 !important;
+  font-size: 25px;
+  font-family: sans-serif;
+
+  vertical-align: center;
+  float:none;
+  display:inline-block;
+  font-weight: 650;
+
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.nav-signout{
+  color:white;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 650;
+
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.feed-bg {
+  background-color: #424242;
+}
