@@ -4,9 +4,9 @@
       <img src="<%= asset_path 'prophile-logo.png' %>" class="navbar-logo">
     </div>
     <ul class="nav navbar-nav navbar-right text-center">
-      <li><a href="#" class="nav-link">Feed</a></li>
-      <li><a href="#" class="nav-link">Upload</a></li>
-      <li><a href="#" class="nav-signout">Sign out</a></li>
+      <li><%= link_to "Feed", videos_path, class: "nav-link" %></li>
+      <li><%= link_to "Upload", videos_path, method: :new, class: "nav-link" %></li>
+      <li><%= link_to "Log out", logout_path, method: :delete, class: "nav-link" %></li>
     </ul>
   </div>
 </nav>

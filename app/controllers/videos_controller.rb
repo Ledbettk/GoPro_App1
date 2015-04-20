@@ -9,6 +9,7 @@ class VideosController < ApplicationController
     		index
     	else
     		puts "something went wrong in creating video"
+        end
     end
 
     def index
