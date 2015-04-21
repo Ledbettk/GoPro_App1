@@ -26,7 +26,14 @@ class VideosController < ApplicationController
     end
     
     def show_video
-    	@video = Videos.find(params[:id])
-    	render video_page
+      user = User.find(current_user.id)
+    	@videos = user.videos
+    	render :video_page
+    end
+    
+    def show
+      @video = Video.find(params[:id])
+      @youtube_id = @video.youtube_id
+      @vimeo_id = @video.vimeo_id
     end
 end

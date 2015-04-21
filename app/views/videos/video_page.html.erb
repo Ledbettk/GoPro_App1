@@ -1,0 +1,9 @@
+<% @videos.each do |video| %>
+    <% if video.youtube_id %>
+    <!--SHOW YOUTUBE-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= video.youtube_id %>" frameborder="0" allowfullscreen></iframe>
+    <% else %>
+    <!--SHOW VIMEO-->
+    <iframe src="https://player.vimeo.com/video/<%= video.vimeo_id %>" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/85995251">Mary Jane January 5th 2014</a> from <a href="https://vimeo.com/user24874322">Kelsey Ledbetter</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+    <% end %>
+<% end %>
