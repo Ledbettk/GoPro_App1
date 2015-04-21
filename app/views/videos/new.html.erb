@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% provide(:title, "Log in") %>
 <h1>Log in</h1>
 
@@ -16,4 +17,23 @@
 
     <p>New user? <%= link_to "create account", signup_path %></p>
   </div>
+=======
+<h1>Upload New Video</h1>
+
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<%= form_for(@user) do |f| %>
+			<%= render 'shared/error_messages' %>
+
+			<%= f.label :title %>
+			<%= f.text_field :title, class: 'form-control' %>
+
+			<%= f.label :link %>
+			<%= f.text_field :link, class: 'form-control' %>
+
+			
+			<%= f.submit "Submit New Video", class: "btn btn-primary" %>
+		<% end %>
+	</div>
+>>>>>>> 511d9220a9d121b898753523ecd8e7ea92c91e5e
 </div>
