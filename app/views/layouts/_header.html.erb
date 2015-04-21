@@ -5,7 +5,7 @@
     </div>
     <ul class="nav navbar-nav navbar-right text-center">
       <li><%= link_to "Feed", videos_path, class: "nav-link" %></li>
-      <li><%= link_to "Upload", videos_path, method: :new, class: "nav-link" %></li>
+      <li><%= link_to "Upload", new_video_path, class: "nav-link" %></li>
       <li><%= link_to "Log out", logout_path, method: :delete, class: "nav-link" %></li>
     </ul>
   </div>
