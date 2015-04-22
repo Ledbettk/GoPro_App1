@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   root 'sessions#new'
 
   get 'videos' => 'videos#index'
-  get 'videos/:id' => 'videos#show_video'
-
+  get 'videos/new' => 'videos#new', as: 'new_video'
+  get 'videos/:id' => 'videos#show'
+  
+  
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'

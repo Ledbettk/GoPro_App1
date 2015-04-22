@@ -1,14 +1,10 @@
 class VideosController < ApplicationController
     def new
-        @video = video.new
+        @video = Video.new
     end
 
     def index
       @video = Video.all
-    end
-    
-    def show
-     @video = Video.find(params[:id])
     end
     
     def create
@@ -23,12 +19,6 @@ class VideosController < ApplicationController
       @video.delete
       flash.notice = "Video '#{@video.title}' Deleted!"
       redirect_to articles_path
-    end
-    
-    def show_video
-      user = User.find(current_user.id)
-    	@videos = user.videos
-    	render :video_page
     end
     
     def show
