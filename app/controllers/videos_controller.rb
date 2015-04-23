@@ -4,11 +4,18 @@ class VideosController < ApplicationController
     end
 
     def index
-      @video = Video.all
+      @videos = Video.all
     end
     
     def create
+      video_params = {
+        link: params[:link],
+        title: params[:title],
+        author: current_user[:name],
+        user_id: current_user[:id]
+      }
       @video = Video.new(video_params)
+
       @video.save
       flash.notice = "Video '#{@video.title}' Updated!"
       redirect_to video_path(@video)

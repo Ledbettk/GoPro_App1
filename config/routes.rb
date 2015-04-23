@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
   resources :users
+  resources :videos
   get 'sessions/new'
   get 'users/new'
   
   root 'sessions#new'
 
-  get 'videos' => 'videos#index'
-  get 'videos/new' => 'videos#new', as: 'new_video'
-  get 'videos/:id' => 'videos#show'
+  #get 'videos' => 'videos#index'
+  #get 'videos/new' => 'videos#new', as: 'new_video'
+  #get 'videos/:id' => 'videos#show'
   
+  #post 'videos/new' => 'videos#create'
+
   
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
