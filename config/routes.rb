@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
   resources :users
+  resources :videos
+  
   get 'sessions/new'
   get 'users/new'
-  
-  root 'sessions#new'
 
-  get 'videos' => 'videos#index'
-  get 'videos/:id' => 'videos#show_video'
+  root 'sessions#new'
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
