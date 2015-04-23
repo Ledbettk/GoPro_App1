@@ -3,7 +3,8 @@
     <div class="navbar-header text-center">
       <img src="<%= asset_path 'prophile-logo.png' %>" class="navbar-logo">
     </div>
-    <ul class="nav navbar-nav navbar-right text-center">
+    <ul class="nav navbar-nav navbar-right text-center" id="gopro-nav">
+      <li id="current-user-nav"><span>Hello, <%= current_user.name %></span></li>
       <li><%= link_to "Feed", videos_path, class: "nav-link" %></li>
       <li><%= link_to "Submit", new_video_path, class: "nav-link" %></li>
       <li><%= link_to "Log out", logout_path, method: :delete, class: "nav-link" %></li>

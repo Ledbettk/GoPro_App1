@@ -1,6 +1,11 @@
 class VideosController < ApplicationController
+    
+    def get_link(in_link)
+      return in_link[in_link.index('v=')+2,in_link.length]
+    end
+
     def new
-        @video = Video.new
+      @video = Video.new
     end
 
     def index
@@ -8,14 +13,16 @@ class VideosController < ApplicationController
     end
     
     def create
+      yt_link = get_link(params[:video][:link])
+
       video_params = {
-        link: params[:link],
+        link: yt_link,
         title: params[:title],
         author: current_user[:name],
         user_id: current_user[:id]
       }
-      @video = Video.new(video_params)
 
+      @video = Video.new(video_params)
       @video.save
       flash.notice = "Video '#{@video.title}' Updated!"
       redirect_to video_path(@video)
