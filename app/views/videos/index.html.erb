@@ -5,10 +5,23 @@
 			<div class="col-md-4 col-xs-6">
 				<div class="panel text-center">
 					<div class="panel-header text-center">
-						<%= video.title %>
+					<% if video.title %>
+						<h2><%= video.title %></h2>
+					<% else %>
+						<h2>[missing video title]</h2>
+					<% end %>
 					</div>
 					<div class="panel-body">
-						<iframe id="ytplayer" type="text/html" width="320" height="240" src="http://www.youtube.com/embed/<%= video.link %>?autoplay=0&origin=http://www.google.com" frameborder="0"></iframe>
+						<a href="/videos/<%= video.id %>">
+							<div class="glyphicon glyphicon-play-circle play-glyph"></div>
+							<% if video.youtube_id == nil %>
+								<img class="video-prev">
+							<% else %>
+								<img class="video-prev" src="http://img.youtube.com/vi/<%= video.youtube_id %>/0.jpg">
+							<% end %>
+
+							
+						</a>
 					</div>
 				</div>
 			</div>

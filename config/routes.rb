@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   #post 'videos/new' => 'videos#create'
 
   
-  get 'login' => 'sessions#new'
+  get 'login' => 'sessions#new', as: :login
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 

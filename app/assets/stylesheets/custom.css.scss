@@ -32,10 +32,15 @@ $gray-mediumlight: #eaeaea;
   }
 }
 
+.nav-wrapper{
+  margin-bottom: 40px;
+}
+
 .navbar-logo{
   max-width: 100%;
   max-height: 80px;
 }
+
 
 .nav-style{
   background-color: black;
@@ -84,4 +89,95 @@ $gray-mediumlight: #eaeaea;
   margin-right: 20px;
   color: white;
   margin-top: 11px;
+}
+
+.video-prev {
+  width: 320px;
+  height: 240px;
+}
+
+.panel {
+  border: 2px solid #ddd;
+  border-radius: 0px;
+}
+
+.panel-body a{
+  color: inherit;
+}
+
+.play-glyph {
+  font-size: 50px;
+
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  text-shadow: 0px 0px 5px #fff;
+
+  transition: all .2s ease;
+}
+
+.play-glyph:hover{
+  text-shadow: 0px 0px 5px #000;
+}
+
+.fullscreen-iframe {
+  width: 100%;
+  height: 600px;
+  position: static;
+  top: 10px;
+  left: 0;
+}
+
+.signin-wrapper{
+  margin: 0 auto;
+  background: rgba(30,30,30,0.5);
+  color: #ddd;
+
+  width: 300px;
+  height: 500px;
+  padding: 20px;
+
+  margin-top: 25%;
+
+  position: relative;
+
+  border: 2px solid #000;
+}
+
+.signin-wrapper a {
+  font-weight: 700;
+  color: #aaF;
+}
+
+.signin-wrapper img {
+  max-width: 300px;
+  max-height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+}
+
+#signin-top {
+  margin-top: 145px;
+}
+
+#signin-top input {
+  margin: 10px 0px;
+}
+
+#signin-bottom {
+  
+}
+
+#signup-form {
+  
+}
+
+#signup-form input {
+  margin: 10px 0;
+}
+
+.formcontainer input {
+  margin: 10px 0;
 }
